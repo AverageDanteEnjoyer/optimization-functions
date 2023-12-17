@@ -18,7 +18,7 @@ public class ParticleSwarmIterator extends OptimizationIterator {
         this.particlesVector = generateInitialVector(1);
         pBest = new double[nParticles][domain.length+1];
     }
-
+    @Override
     public double[] next(){
         updateBestValues();
         updateParticles();

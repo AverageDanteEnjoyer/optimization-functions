@@ -5,4 +5,5 @@ public abstract class OptimizationIterator {
         this.domain = domain;
         targetFunction = new Function(evalExpr);
     }
+    public abstract double[] next();
 }
