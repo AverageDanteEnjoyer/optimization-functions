@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="create working initialization and bests updating">
+    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="finish ParticleSwarmIterator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ParticleSwarmIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParticleSwarmIterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702753095951</updated>
       <workItem from="1702753097418" duration="451000" />
-      <workItem from="1702818688397" duration="17539000" />
+      <workItem from="1702818688397" duration="18451000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1702824582874</created>
@@ -95,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702835913391</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finish ParticleSwarmIterator">
+      <created>1702840391343</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702840391343</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +111,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="add evaluating initial values and updating pBest, gBest" />
     <MESSAGE value="create working initialization and bests updating" />
-    <option name="LAST_COMMIT_MESSAGE" value="create working initialization and bests updating" />
+    <MESSAGE value="finish ParticleSwarmIterator" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish ParticleSwarmIterator" />
   </component>
 </project>

@@ -3,7 +3,7 @@ import java.util.Random;
 public class ParticleSwarmIterator extends OptimizationIterator {
     public double c1;
     public double c2;
-    public int nParticles = 800;
+    public int nParticles = 900;
     public double[][] particlesVector;
     public double[][] velocityVector;
     public double[] gBest = null;
