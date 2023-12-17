@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="initial commit">
+    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="add evaluating initial values and updating pBest, gBest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptimizationFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptimizationIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ParticleSwarmFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParticleSwarmIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ParticleSwarmIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParticleSwarmIterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702753095951</updated>
       <workItem from="1702753097418" duration="451000" />
-      <workItem from="1702818688397" duration="13067000" />
+      <workItem from="1702818688397" duration="14163000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1702824582874</created>
@@ -82,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702824582874</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add evaluating initial values and updating pBest, gBest">
+      <created>1702834715101</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702834715101</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +96,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="add evaluating initial values and updating pBest, gBest" />
+    <option name="LAST_COMMIT_MESSAGE" value="add evaluating initial values and updating pBest, gBest" />
   </component>
 </project>

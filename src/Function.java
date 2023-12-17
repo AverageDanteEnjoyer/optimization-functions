@@ -14,8 +14,8 @@ public class Function {
         variables.set("x2", x2);
         return eval.evaluate(evalExpression, variables);
     }
-    public double evaluate(double x){
-        variables.set("x", x);
+    public double evaluate(double x1){
+        variables.set("x1", x1);
         return eval.evaluate(evalExpression, variables);
     }
 }
