@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="add generating neighbors">
+    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="add simulated annealing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Function.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ParticleSwarmIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParticleSwarmIterator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SimulatedAnnealingIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimulatedAnnealingIterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +73,7 @@
       <updated>1702753095951</updated>
       <workItem from="1702753097418" duration="451000" />
       <workItem from="1702818688397" duration="23396000" />
-      <workItem from="1702905829469" duration="10254000" />
+      <workItem from="1702905829469" duration="12605000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1702824582874</created>
@@ -126,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702909650673</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add simulated annealing">
+      <created>1702917964847</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702917964847</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +145,7 @@
     <MESSAGE value="add better parameters for rosenbrock func" />
     <MESSAGE value="add SimulatedAnnealingIterator" />
     <MESSAGE value="add generating neighbors" />
-    <option name="LAST_COMMIT_MESSAGE" value="add generating neighbors" />
+    <MESSAGE value="add simulated annealing" />
+    <option name="LAST_COMMIT_MESSAGE" value="add simulated annealing" />
   </component>
 </project>

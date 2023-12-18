@@ -6,7 +6,7 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
     public double[] currentSolution;
 
     private double sigmaCooling = 1;
-    private final double sigmaCoolingRate = 0.987;
+    private final double sigmaCoolingRate = 0.993;
 
     public SimulatedAnnealingIterator(double[][] domain, String evalExpr, double initialTemperature, double coolingRate, double[] initialSolution) {
         super(domain, evalExpr);
@@ -37,7 +37,7 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
         double[] neighbor = new double[domain.length];
 
         for (int j = 0; j < currentSolution.length; j++) {
-            double sigma = (domain[j][1] - domain[j][0]) / 3;
+            double sigma = (domain[j][1] - domain[j][0]) / 4;
             double noise = sigmaCooling * sigma * (random.nextDouble() * 2 - 1);
             System.out.println("Noise: "+ noise);
             if (currentSolution[j] + noise < domain[j][0] || currentSolution[j] + noise > domain[j][1]) {
