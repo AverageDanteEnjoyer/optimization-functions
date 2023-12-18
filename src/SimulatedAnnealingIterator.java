@@ -1,19 +1,23 @@
-import java.util.Arrays;
 import java.util.Random;
 
 public class SimulatedAnnealingIterator extends OptimizationIterator {
     private double initialTemperature;
     private double coolingRate;
+    public double[] currentSolution = null;
 
-    public SimulatedAnnealingIterator(double[][] domain, String evalExpr, double initialTemperature, double coolingRate) {
+    private int neighborsNumber = 20;
+
+    public SimulatedAnnealingIterator(double[][] domain, String evalExpr, double initialTemperature, double coolingRate, double[] initialSolution) {
         super(domain, evalExpr);
         this.initialTemperature = initialTemperature;
         this.coolingRate = coolingRate;
+        this.currentSolution = initialSolution;
     }
 
     @Override
     public double[] next() {
-        return new double[3];
+
+        return currentSolution;
     }
 
     public double getFunctionValue(double[] particle){
@@ -23,13 +27,21 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
         return this.targetFunction.evaluate(particle[0], particle[1]);
     }
 
-    private double[] generateRandomSolution() {
+    public double[][] generateNeighbors() {
         Random random = new Random();
-        double[] solution = new double[domain.length];
-        for (int i = 0; i < domain.length; i++) {
-            solution[i] = random.nextDouble() * (domain[i][1] - domain[i][0]) + domain[i][0];
-        }
-        return solution;
-    }
+        double[][] neighbors = new double[neighborsNumber][domain.length];
 
+        for (int i = 0; i < neighborsNumber; i++) {
+            for (int j = 0; j < currentSolution.length; j++) {
+                double sigma = (domain[j][1] - domain[j][0])/4;
+                double noise = sigma * random.nextGaussian();
+                if(currentSolution[j]+noise < domain[j][0] || currentSolution[j]+noise > domain[j][1]){
+                    noise = -noise;
+                }
+                neighbors[i][j] = currentSolution[j]+noise;
+            }
+        }
+
+        return neighbors;
+    }
 }

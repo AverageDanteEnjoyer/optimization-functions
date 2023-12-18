@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="add better parameters for rosenbrock func">
-      <change afterPath="$PROJECT_DIR$/src/SimulatedAnnealingIterator.java" afterDir="false" />
+    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="add SimulatedAnnealingIterator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OptimizationIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OptimizationIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ParticleSwarmIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ParticleSwarmIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SimulatedAnnealingIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimulatedAnnealingIterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Tom/IdeaProjects/Zadanie_6/lib",
+    "last_opened_file_path": "C:/Users/Tom/IdeaProjects/Zadanie_6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +71,8 @@
       <option name="presentableId" value="Default" />
       <updated>1702753095951</updated>
       <workItem from="1702753097418" duration="451000" />
-      <workItem from="1702818688397" duration="21583000" />
+      <workItem from="1702818688397" duration="23396000" />
+      <workItem from="1702905829469" duration="2342000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1702824582874</created>
@@ -111,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702841734773</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add SimulatedAnnealingIterator">
+      <created>1702844274152</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702844274152</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +128,7 @@
     <MESSAGE value="create working initialization and bests updating" />
     <MESSAGE value="finish ParticleSwarmIterator" />
     <MESSAGE value="add better parameters for rosenbrock func" />
-    <option name="LAST_COMMIT_MESSAGE" value="add better parameters for rosenbrock func" />
+    <MESSAGE value="add SimulatedAnnealingIterator" />
+    <option name="LAST_COMMIT_MESSAGE" value="add SimulatedAnnealingIterator" />
   </component>
 </project>
