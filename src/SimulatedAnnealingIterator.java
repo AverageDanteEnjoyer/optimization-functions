@@ -39,7 +39,6 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
         for (int j = 0; j < currentSolution.length; j++) {
             double sigma = (domain[j][1] - domain[j][0]) / 4;
             double noise = sigmaCooling * sigma * (random.nextDouble() * 2 - 1);
-            System.out.println("Noise: "+ noise);
             if (currentSolution[j] + noise < domain[j][0] || currentSolution[j] + noise > domain[j][1]) {
                 noise = -noise;
             }
@@ -60,7 +59,6 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
 
     private void coolDown(){
         temperature *= coolingRate;
-        System.out.println("temp: "+ temperature);
     }
 
 }
