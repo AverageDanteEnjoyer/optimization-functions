@@ -8,7 +8,6 @@ public class ParticleSwarmIterator extends OptimizationIterator {
     public double[][] velocityVector;
     public double[] gBest = null;
     public double[][] pBest;
-
     public int epoch = 0;
     public ParticleSwarmIterator(double[][] domain, String evalExpr, double c1, double c2, double initialVelocityMultiplier){
         super(domain, evalExpr);
@@ -25,7 +24,6 @@ public class ParticleSwarmIterator extends OptimizationIterator {
         epoch++;
         return gBest;
     }
-
     public double[][] generateInitialVector(double domainMultiplier){
         double[][] vector = new double[nParticles][domain.length];
         Random random = new Random();
@@ -38,17 +36,9 @@ public class ParticleSwarmIterator extends OptimizationIterator {
         }
         return vector;
     }
-
-    public double getFunctionValue(double[] particle){
-        if(particle.length == 1){
-            return this.targetFunction.evaluate(particle[0]);
-        }
-        return this.targetFunction.evaluate(particle[0], particle[1]);
-    }
-
     public void updateBestValues(){
         for (int i = 0; i < nParticles; i++) {
-            double functionValue = getFunctionValue(particlesVector[i]);
+            double functionValue = targetFunction.evaluate(particlesVector[i]);
             if(!(epoch == 0) && !(functionValue < pBest[i][domain.length]))continue;
 
             int j;
@@ -61,7 +51,6 @@ public class ParticleSwarmIterator extends OptimizationIterator {
             }
         }
     }
-
     public void updateParticles(){
         Random random = new Random();
         for (int i = 0; i < nParticles; i++) {

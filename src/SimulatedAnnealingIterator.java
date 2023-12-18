@@ -1,47 +1,66 @@
 import java.util.Random;
 
 public class SimulatedAnnealingIterator extends OptimizationIterator {
-    private double initialTemperature;
+    private double temperature;
     private double coolingRate;
-    public double[] currentSolution = null;
+    public double[] currentSolution;
 
-    private int neighborsNumber = 20;
+    private double sigmaCooling = 1;
+    private final double sigmaCoolingRate = 0.987;
 
     public SimulatedAnnealingIterator(double[][] domain, String evalExpr, double initialTemperature, double coolingRate, double[] initialSolution) {
         super(domain, evalExpr);
-        this.initialTemperature = initialTemperature;
+        this.temperature = initialTemperature;
         this.coolingRate = coolingRate;
         this.currentSolution = initialSolution;
     }
 
     @Override
     public double[] next() {
-
-        return currentSolution;
-    }
-
-    public double getFunctionValue(double[] particle){
-        if(particle.length == 1){
-            return this.targetFunction.evaluate(particle[0]);
+        double[] neighbor = generateNeighbor();
+        if(acceptNeighbor(neighbor)){
+            currentSolution = neighbor;
         }
-        return this.targetFunction.evaluate(particle[0], particle[1]);
+        coolDown();
+        double[] solutionWithEnergy = new double[currentSolution.length+1];
+        int i;
+        for(i=0;i<currentSolution.length;i++){
+            solutionWithEnergy[i] = currentSolution[i];
+        }
+        solutionWithEnergy[i] = targetFunction.evaluate(currentSolution);
+
+        return solutionWithEnergy;
     }
 
-    public double[][] generateNeighbors() {
+    private double[] generateNeighbor() {
         Random random = new Random();
-        double[][] neighbors = new double[neighborsNumber][domain.length];
+        double[] neighbor = new double[domain.length];
 
-        for (int i = 0; i < neighborsNumber; i++) {
-            for (int j = 0; j < currentSolution.length; j++) {
-                double sigma = (domain[j][1] - domain[j][0])/4;
-                double noise = sigma * random.nextGaussian();
-                if(currentSolution[j]+noise < domain[j][0] || currentSolution[j]+noise > domain[j][1]){
-                    noise = -noise;
-                }
-                neighbors[i][j] = currentSolution[j]+noise;
+        for (int j = 0; j < currentSolution.length; j++) {
+            double sigma = (domain[j][1] - domain[j][0]) / 3;
+            double noise = sigmaCooling * sigma * (random.nextDouble() * 2 - 1);
+            System.out.println("Noise: "+ noise);
+            if (currentSolution[j] + noise < domain[j][0] || currentSolution[j] + noise > domain[j][1]) {
+                noise = -noise;
             }
+            neighbor[j] = currentSolution[j] + noise;
         }
+        sigmaCooling *= sigmaCoolingRate;
 
-        return neighbors;
+        return neighbor;
     }
+    private double getEnergyDelta(double[] neighbor){
+        return (targetFunction.evaluate(neighbor) - targetFunction.evaluate(currentSolution)) / targetFunction.evaluate(neighbor);
+    }
+    private boolean acceptNeighbor(double[] neighbor){
+        Random random = new Random();
+        double energyDelta = getEnergyDelta(neighbor);
+        return energyDelta < 0 || random.nextDouble() < Math.exp(-energyDelta / temperature);
+    }
+
+    private void coolDown(){
+        temperature *= coolingRate;
+        System.out.println("temp: "+ temperature);
+    }
+
 }

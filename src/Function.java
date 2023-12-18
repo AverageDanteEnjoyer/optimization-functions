@@ -9,6 +9,12 @@ public class Function {
         this.evalExpression = evalExpression;
     }
 
+    public double evaluate(double[] vector){
+        if(vector.length == 1){
+            return evaluate(vector[0]);
+        }
+        return evaluate(vector[0], vector[1]);
+    }
     public double evaluate(double x1, double x2){
         variables.set("x1", x1);
         variables.set("x2", x2);
