@@ -17,7 +17,7 @@ public class Main {
         int epochs;
         switch (iteratorType){
             case "SA":
-                iterator = new SimulatedAnnealingIterator(domain, fnExpr, 0.9, 0.95, new double[]{5, -5});
+                iterator = new SimulatedAnnealingIterator(domain, fnExpr, 0.9, 0.95);
                 epochs = 1000;
                 break;
             case "PSO":

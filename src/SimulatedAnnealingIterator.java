@@ -8,11 +8,19 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
     private double sigmaCooling = 1;
     private final double sigmaCoolingRate = 0.993;
 
-    public SimulatedAnnealingIterator(double[][] domain, String evalExpr, double initialTemperature, double coolingRate, double[] initialSolution) {
+    public SimulatedAnnealingIterator(double[][] domain, String evalExpr, double initialTemperature, double coolingRate) {
         super(domain, evalExpr);
         this.temperature = initialTemperature;
         this.coolingRate = coolingRate;
-        this.currentSolution = initialSolution;
+        this.currentSolution = generateInitialSolution();
+    }
+
+    private double[] generateInitialSolution(){
+        double[] initialSolution = new double[domain.length];
+        for(int i=0;i< domain.length;i++){
+            initialSolution[i] = domain[i][0] + (domain[i][1] - domain[i][0])/2;
+        }
+        return initialSolution;
     }
 
     @Override
@@ -60,5 +68,4 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
     private void coolDown(){
         temperature *= coolingRate;
     }
-
 }
