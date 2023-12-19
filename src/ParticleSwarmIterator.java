@@ -64,12 +64,4 @@ public class ParticleSwarmIterator extends OptimizationIterator {
             }
         }
     }
-//    public void displayVector(double[][] vector){
-//        for (int i = 0; i < nParticles; i++) {
-//            for (int j = 0; j < vector[i].length; j++) {
-//                System.out.print(vector[i][j] + " ");
-//            }
-//            System.out.print("\n");
-//        }
-//    }
 }
