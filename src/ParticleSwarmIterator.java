@@ -1,13 +1,13 @@
 import java.util.Random;
 
 public class ParticleSwarmIterator extends OptimizationIterator {
-    public double c1;
-    public double c2;
-    public int nParticles = 900;
-    public double[][] particlesVector;
-    public double[][] velocityVector;
-    public double[] gBest = null;
-    public double[][] pBest;
+    private final double c1;
+    private final double c2;
+    private final int nParticles = 900;
+    private final double[][] particlesVector;
+    private final double[][] velocityVector;
+    private double[] gBest = null;
+    private double[][] pBest;
     public int epoch = 0;
     public ParticleSwarmIterator(double[][] domain, String evalExpr, double c1, double c2, double initialVelocityMultiplier){
         super(domain, evalExpr);
@@ -36,7 +36,7 @@ public class ParticleSwarmIterator extends OptimizationIterator {
         }
         return vector;
     }
-    public void updateBestValues(){
+    private void updateBestValues(){
         for (int i = 0; i < nParticles; i++) {
             double functionValue = targetFunction.evaluate(particlesVector[i]);
             if(!(epoch == 0) && !(functionValue < pBest[i][domain.length]))continue;
@@ -51,7 +51,7 @@ public class ParticleSwarmIterator extends OptimizationIterator {
             }
         }
     }
-    public void updateParticles(){
+    private void updateParticles(){
         Random random = new Random();
         for (int i = 0; i < nParticles; i++) {
             for (int j = 0; j < domain.length; j++) {
@@ -64,12 +64,12 @@ public class ParticleSwarmIterator extends OptimizationIterator {
             }
         }
     }
-    public void displayVector(double[][] vector){
-        for (int i = 0; i < nParticles; i++) {
-            for (int j = 0; j < vector[i].length; j++) {
-                System.out.print(vector[i][j] + " ");
-            }
-            System.out.print("\n");
-        }
-    }
+//    public void displayVector(double[][] vector){
+//        for (int i = 0; i < nParticles; i++) {
+//            for (int j = 0; j < vector[i].length; j++) {
+//                System.out.print(vector[i][j] + " ");
+//            }
+//            System.out.print("\n");
+//        }
+//    }
 }

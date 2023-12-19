@@ -2,8 +2,8 @@ import java.util.Random;
 
 public class SimulatedAnnealingIterator extends OptimizationIterator {
     private double temperature;
-    private double coolingRate;
-    public double[] currentSolution;
+    private final double coolingRate;
+    private double[] currentSolution;
 
     private double sigmaCooling = 1;
     private final double sigmaCoolingRate = 0.993;
