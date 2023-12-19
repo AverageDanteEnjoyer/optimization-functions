@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="change access modifiers">
+    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="enchance iterating through epochs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -37,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Tom/IdeaProjects/Zadanie_6",
+    "last_opened_file_path": "C:/Users/Tom/IdeaProjects/Zadanie6Symulowanego",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,7 +74,7 @@
       <workItem from="1702818688397" duration="23396000" />
       <workItem from="1702905829469" duration="15739000" />
       <workItem from="1702991908787" duration="1433000" />
-      <workItem from="1702999417647" duration="911000" />
+      <workItem from="1702999417647" duration="2531000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1702824582874</created>
@@ -160,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702993285784</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="enchance iterating through epochs">
+      <created>1703001695707</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1703001695707</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +186,7 @@
     <MESSAGE value="get rid of prints" />
     <MESSAGE value="add customizable inputs" />
     <MESSAGE value="change access modifiers" />
-    <option name="LAST_COMMIT_MESSAGE" value="change access modifiers" />
+    <MESSAGE value="enchance iterating through epochs" />
+    <option name="LAST_COMMIT_MESSAGE" value="enchance iterating through epochs" />
   </component>
 </project>

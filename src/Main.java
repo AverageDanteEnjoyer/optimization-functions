@@ -6,6 +6,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Proszę podać funkcję (zmienne proszę nazwać x1, x2, ..., xn)");
         String fnExpr = scanner.nextLine();
+        System.out.println("Proszę podać dziedzinę [x1_min,x1_max x2_min,x2_max  ...]");
+        String domainStr = scanner.nextLine();
+        double [][] domain = parseDomainString(domainStr);
+
         System.out.println("Proszę podać algorytm [SA/PSO]");
         String iteratorType = scanner.nextLine();
 
@@ -13,11 +17,11 @@ public class Main {
         int epochs;
         switch (iteratorType){
             case "SA":
-                iterator = new SimulatedAnnealingIterator(new double[][]{{-10, 10}, {-10, 10}}, fnExpr, 0.9, 0.95, new double[]{5, -5});
+                iterator = new SimulatedAnnealingIterator(domain, fnExpr, 0.9, 0.95, new double[]{5, -5});
                 epochs = 1000;
                 break;
             case "PSO":
-                iterator = new ParticleSwarmIterator(new double[][]{{-10, 10}, {-10, 10}}, fnExpr, 1.3, 1.1, 0.2);
+                iterator = new ParticleSwarmIterator(domain, fnExpr, 1.3, 1.1, 0.2);
                 epochs = 100;
                 break;
             default:
@@ -42,5 +46,15 @@ public class Main {
             System.out.println("Wartość funkcji: " + nextBest[j]);
             System.out.print("\n");
         }
+    }
+
+    public static double[][] parseDomainString(String domainStr){
+        String[] splitDomainStr = domainStr.split(" ");
+        double[][] domain = new double[splitDomainStr.length][2];
+        for(int i=0;i< splitDomainStr.length;i++){
+            domain[i][0] = Double.parseDouble(splitDomainStr[i].split(",")[0]);
+            domain[i][1] = Double.parseDouble(splitDomainStr[i].split(",")[1]);
+        }
+        return domain;
     }
 }
