@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="add custom domain">
+    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="add initial point">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SimulatedAnnealingIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimulatedAnnealingIterator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +74,7 @@
       <workItem from="1702818688397" duration="23396000" />
       <workItem from="1702905829469" duration="15739000" />
       <workItem from="1702991908787" duration="1433000" />
-      <workItem from="1702999417647" duration="3316000" />
+      <workItem from="1702999417647" duration="4394000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1702824582874</created>
@@ -175,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703004230363</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add initial point">
+      <created>1703005053217</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1703005053217</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +202,7 @@
     <MESSAGE value="change access modifiers" />
     <MESSAGE value="enchance iterating through epochs" />
     <MESSAGE value="add custom domain" />
-    <option name="LAST_COMMIT_MESSAGE" value="add custom domain" />
+    <MESSAGE value="add initial point" />
+    <option name="LAST_COMMIT_MESSAGE" value="add initial point" />
   </component>
 </project>

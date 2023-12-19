@@ -15,10 +15,10 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
         this.currentSolution = generateInitialSolution();
     }
 
-    private double[] generateInitialSolution(){
+    private double[] generateInitialSolution() {
         double[] initialSolution = new double[domain.length];
-        for(int i=0;i< domain.length;i++){
-            initialSolution[i] = domain[i][0] + (domain[i][1] - domain[i][0])/2;
+        for (int i = 0; i < domain.length; i++) {
+            initialSolution[i] = domain[i][0] + (domain[i][1] - domain[i][0]) / 2;
         }
         return initialSolution;
     }
@@ -26,13 +26,13 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
     @Override
     public double[] next() {
         double[] neighbor = generateNeighbor();
-        if(acceptNeighbor(neighbor)){
+        if (acceptNeighbor(neighbor)) {
             currentSolution = neighbor;
         }
         coolDown();
-        double[] solutionWithEnergy = new double[currentSolution.length+1];
+        double[] solutionWithEnergy = new double[currentSolution.length + 1];
         int i;
-        for(i=0;i<currentSolution.length;i++){
+        for (i = 0; i < currentSolution.length; i++) {
             solutionWithEnergy[i] = currentSolution[i];
         }
         solutionWithEnergy[i] = targetFunction.evaluate(currentSolution);
@@ -56,16 +56,22 @@ public class SimulatedAnnealingIterator extends OptimizationIterator {
 
         return neighbor;
     }
-    private double getEnergyDelta(double[] neighbor){
+
+    private double getEnergyDelta(double[] neighbor) {
         return (targetFunction.evaluate(neighbor) - targetFunction.evaluate(currentSolution)) / targetFunction.evaluate(neighbor);
     }
-    private boolean acceptNeighbor(double[] neighbor){
+
+    private boolean acceptNeighbor(double[] neighbor) {
         Random random = new Random();
         double energyDelta = getEnergyDelta(neighbor);
         return energyDelta < 0 || random.nextDouble() < Math.exp(-energyDelta / temperature);
     }
 
-    private void coolDown(){
+    private void coolDown() {
+        if(temperature <= 0.25){
+            temperature *= Math.pow(coolingRate, 3);
+            return;
+        }
         temperature *= coolingRate;
     }
 }
