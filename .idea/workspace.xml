@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="adjust">
+    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="get rid of prints">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimulatedAnnealingIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimulatedAnnealingIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
       <updated>1702753095951</updated>
       <workItem from="1702753097418" duration="451000" />
       <workItem from="1702818688397" duration="23396000" />
-      <workItem from="1702905829469" duration="13898000" />
+      <workItem from="1702905829469" duration="15739000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1702824582874</created>
@@ -137,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702921002589</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="get rid of prints">
+      <created>1702922480472</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702922480472</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +160,7 @@
     <MESSAGE value="add generating neighbors" />
     <MESSAGE value="add simulated annealing" />
     <MESSAGE value="adjust" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust" />
+    <MESSAGE value="get rid of prints" />
+    <option name="LAST_COMMIT_MESSAGE" value="get rid of prints" />
   </component>
 </project>
