@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="add customizable inputs">
+    <list default="true" id="6f3dc204-6e18-49fb-993f-ae4d0fee3ffe" name="Changes" comment="change access modifiers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -37,7 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Tom/IdeaProjects/Zadanie6Symulowanego",
+    "last_opened_file_path": "C:/Users/Tom/IdeaProjects/Zadanie_6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,7 +73,8 @@
       <workItem from="1702753097418" duration="451000" />
       <workItem from="1702818688397" duration="23396000" />
       <workItem from="1702905829469" duration="15739000" />
-      <workItem from="1702991908787" duration="796000" />
+      <workItem from="1702991908787" duration="1433000" />
+      <workItem from="1702999417647" duration="911000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1702824582874</created>
@@ -152,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702992709234</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="change access modifiers">
+      <created>1702993285784</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702993285784</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +178,7 @@
     <MESSAGE value="adjust" />
     <MESSAGE value="get rid of prints" />
     <MESSAGE value="add customizable inputs" />
-    <option name="LAST_COMMIT_MESSAGE" value="add customizable inputs" />
+    <MESSAGE value="change access modifiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="change access modifiers" />
   </component>
 </project>

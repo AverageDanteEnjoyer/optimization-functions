@@ -10,33 +10,37 @@ public class Main {
         String iteratorType = scanner.nextLine();
 
         OptimizationIterator iterator;
+        int epochs;
         switch (iteratorType){
             case "SA":
                 iterator = new SimulatedAnnealingIterator(new double[][]{{-10, 10}, {-10, 10}}, fnExpr, 0.9, 0.95, new double[]{5, -5});
+                epochs = 1000;
                 break;
             case "PSO":
                 iterator = new ParticleSwarmIterator(new double[][]{{-10, 10}, {-10, 10}}, fnExpr, 1.3, 1.1, 0.2);
+                epochs = 100;
                 break;
             default:
                 System.out.println("Nie istnieje typ: " + iteratorType);
                 return;
         }
-
-        double[] nextBest = null;
-        for(int i=0;i<1000;i++){
-            double[] tmp = iterator.next();
-            if(nextBest != null && tmp[tmp.length-1] == nextBest[tmp.length-1])continue;
-            nextBest=tmp;
-            System.out.println(i);
-            System.out.println(nextBest[0]);
-            System.out.println(nextBest[1]);
-            System.out.println(nextBest[2]);
-            System.out.print("\n");
-        }
+        iterateThroughEpochs(iterator, epochs);
         scanner.close();
     }
 
-    private void iterateThroughEpochs(OptimizationIterator iterator, int epochs){
-
+    public static void iterateThroughEpochs(OptimizationIterator iterator, int epochs){
+        double[] nextBest = null;
+        for(int i=0;i<epochs;i++){
+            double[] tmp = iterator.next();
+            if(nextBest != null && tmp[tmp.length-1] == nextBest[tmp.length-1])continue;
+            nextBest=tmp;
+            System.out.println("Epoka: " + i);
+            int j;
+            for(j=0;j<nextBest.length-1;j++){
+                System.out.println("x" + j + ": " + nextBest[j]);
+            }
+            System.out.println("Wartość funkcji: " + nextBest[j]);
+            System.out.print("\n");
+        }
     }
 }
